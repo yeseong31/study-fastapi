@@ -1,4 +1,3 @@
-# https://bjpublic.tistory.com/category/%EC%A0%84%EC%B2%B4%20%EC%B6%9C%EA%B0%84%20%EB%8F%84%EC%84%9C
 import asyncio
 import os
 import re
