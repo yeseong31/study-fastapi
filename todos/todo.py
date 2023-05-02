@@ -49,5 +49,26 @@ async def update_todo(todo_data: TodoItem, todo_id: int = Path(...,
     }
 
 
+@todo_router.delete('/todo/{todo_id}')
+async def delete_single_todo(todo_id: int) -> dict:
+    for i, todo in enumerate(todo_list):
+        if todo.id == todo_id:
+            todo_list.pop(i)
+            return {
+                'todo': '[SUCCESS] delete Todo'
+            }
+        return {
+            'message': "Todo with supplied ID doesn't exist."
+        }
+
+
+@todo_router.delete('/todo')
+async def delete_all_todo() -> dict:
+    todo_list.clear()
+    return {
+        'todo': '[SUCCESS] delete Todos'
+    }
+
+
 async def query_route(query: str = Query(None)):
     return query
