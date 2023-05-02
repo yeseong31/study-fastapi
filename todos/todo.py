@@ -1,10 +1,10 @@
 from fastapi import APIRouter, Path, Query
 
-from todos.models import Todo
+from todos.models import Todo, TodoItem
 
 todo_router = APIRouter()
 
-todo_list = []  # 임시 데이터베이스
+todo_list = []
 
 
 @todo_router.post('/todo')
@@ -29,6 +29,20 @@ async def get_single_todo(todo_id: int = Path(...,
         if todo.id == todo_id:
             return {
                 'todo': todo
+            }
+    return {
+        'message': "Todo with supplied ID doesn't exist."
+    }
+
+
+@todo_router.put('/todo/{todo_id}')
+async def update_todo(todo_data: TodoItem, todo_id: int = Path(...,
+                                                               title='The ID of the todo to be updated.')) -> dict:
+    for todo in todo_list:
+        if todo.id == todo_id:
+            todo.item = todo_data
+            return {
+                'todo': '[SUCCESS] update Todo'
             }
     return {
         'message': "Todo with supplied ID doesn't exist."
