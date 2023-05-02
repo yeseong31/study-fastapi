@@ -9,3 +9,11 @@ class Item(BaseModel):
 class Todo(BaseModel):
     id: int
     item: Item
+
+    class Config:
+        schema_extra = {
+            'example': {
+                'id': 1,
+                'item': 'Example Schema'
+            }
+        }
