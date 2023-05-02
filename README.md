@@ -1,7 +1,8 @@
 ![Python](https://img.shields.io/badge/Python-3776AB.svg?style=flat-square&logo=Python&logoColor=ffdd54)
+![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=flat-square&logo=fastapi)
 ![PyCharm](https://img.shields.io/badge/PyCharm-143?style=flat-square&logo=pycharm&logoColor=black&color=black&labelColor=green)
 
-> ✏️ 파이썬 동시성 프로그래밍 공부 내용입니다.
+> ✏️ FastAPI 공부 중...
 
 ## 이론 정리
-[Notion 링크](https://incongruous-net-2ed.notion.site/Python-Concurrent-Programming-1831f1b9671a43c6a4cdda20c19b2e0b)
+[Notion 링크](https://incongruous-net-2ed.notion.site/FastAPI-8132465620144c36aa3a65979db73d2f)
